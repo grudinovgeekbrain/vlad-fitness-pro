@@ -134,7 +134,7 @@
       <label class="trap" aria-hidden="true" for="lead-website">Не заполнять</label>
       <input class="trap" id="lead-website" name="website" tabindex="-1" autocomplete="off">
       <button class="btn" type="submit" style="width:100%;margin-top:8px">Отправить заявку ↗</button>
-      <p id="lead-status" class="form-note" aria-live="polite">Заявка придёт Владу в Telegram. Отправка заявки ещё не означает подтверждённую запись.</p>
+      <p id="lead-status" class="form-note" aria-live="polite">Заявка отправляется Владу в Telegram. Если автоматическая отправка не сработает, появится отдельная кнопка связи.</p>
     </form>
   </div></div>
 </section>
@@ -146,7 +146,23 @@ const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecti
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 document.querySelectorAll('[data-service]').forEach(el=>el.addEventListener('click',()=>{const service=el.dataset.service;try{sessionStorage.setItem('vfp_service',service)}catch(e){}}));
 const leadForm=document.getElementById('lead-form');
-if(leadForm){leadForm.addEventListener('submit',async(e)=>{e.preventDefault();const data=new FormData(leadForm);const status=document.getElementById('lead-status');const button=leadForm.querySelector('button[type=submit]');const payload={name:String(data.get('name')||'').trim(),contact:String(data.get('contact')||'').trim(),goal:String(data.get('goal')||''),format:String(data.get('format')||''),website:String(data.get('website')||'')};button.disabled=true;button.textContent='Отправляем…';status.textContent='Отправляем заявку…';try{const response=await fetch('/.netlify/functions/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const result=await response.json().catch(()=>({}));if(!response.ok)throw new Error(result.error||'Не удалось отправить заявку.');status.textContent='Заявка отправлена! Влад получит её в Telegram и свяжется с тобой. Это пока запрос на связь, время тренировки будет подтверждено отдельно.';leadForm.reset();}catch(err){status.textContent='Автоматическая отправка пока не подключена или временно недоступна. Напиши напрямую в Instagram Direct — так заявка точно попадёт в переписку.';window.open('https://ig.me/m/vlad_fitnesspro','_blank','noopener');}finally{button.disabled=false;button.textContent='Отправить заявку ↗';}});}
+if(leadForm){leadForm.addEventListener('submit',async(e)=>{e.preventDefault();const data=new FormData(leadForm);const status=document.getElementById('lead-status');const button=leadForm.querySelector('button[type=submit]');const payload={name:String(data.get('name')||'').trim(),contact:String(data.get('contact')||'').trim(),goal:String(data.get('goal')||''),format:String(data.get('format')||''),website:String(data.get('website')||'')};button.disabled=true;button.textContent='Отправляем…';status.textContent='Отправляем заявку…';try{const response=await fetch('/.netlify/functions/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const result=await response.json().catch(()=>({}));if(!response.ok)throw new Error(result.error||'Не удалось отправить заявку.');status.textContent='Заявка отправлена! Влад получит её в Telegram и свяжется с тобой. Это пока запрос на связь, время тренировки будет подтверждено отдельно.';leadForm.reset();}catch(err){
+  status.textContent='Не удалось отправить заявку автоматически. Заявка пока не подтверждена. Попробуй ещё раз или свяжись со мной напрямую в Telegram.';
+  let fallback=document.getElementById('lead-fallback');
+  if(!fallback){
+    fallback=document.createElement('a');
+    fallback.id='lead-fallback';
+    fallback.href='https://t.me/VladFitnessProBookingBot';
+    fallback.target='_blank';
+    fallback.rel='noopener';
+    fallback.textContent='Написать в Telegram';
+    fallback.className='btn secondary';
+    fallback.style.marginTop='8px';
+    fallback.style.textAlign='center';
+    status.insertAdjacentElement('afterend',fallback);
+  }
+  fallback.hidden=false;
+}finally{button.disabled=false;button.textContent='Отправить заявку ↗';}});}
 </script>
 </body>
 </html>
