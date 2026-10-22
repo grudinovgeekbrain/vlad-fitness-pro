@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10110f">
+<meta name="description" content="Vlad Fitness Pro — персональные тренировки и онлайн-сопровождение. Силовые тренировки, техника упражнений и система, которую можно встроить в жизнь.">
+<title>Vlad Fitness Pro — тренируйся с системой</title>
+<style>
+:root{--bg:#10110f;--panel:#171916;--panel2:#20231e;--text:#f5f4ef;--muted:#b4b6ad;--line:rgba(255,255,255,.12);--accent:#c7f36b;--accent2:#e2ff9e;--max:1160px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button,a{ -webkit-tap-highlight-color:transparent}button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}.topbar{position:sticky;top:0;z-index:20;background:rgba(16,17,15,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{font-weight:900;letter-spacing:-.04em;font-size:19px}.brand span{color:var(--accent)}.navlinks{display:flex;gap:25px;color:var(--muted);font-size:13px}.navlinks a:hover{color:var(--accent)}.navcta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;background:var(--accent);color:#14170e;font-weight:800;padding:14px 21px;transition:transform .25s,background .25s;cursor:pointer}.navcta{padding:11px 17px;font-size:13px}.btn:hover,.navcta:hover{transform:translateY(-3px);background:var(--accent2)}.btn.secondary{background:transparent;border:1px solid var(--line);color:var(--text)}.btn.secondary:hover{border-color:var(--accent);color:var(--accent)}.hero{position:relative;overflow:hidden;padding:70px 0 80px;min-height:650px;display:flex;align-items:center}.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 72% 42%,rgba(199,243,107,.09),transparent 35%),linear-gradient(90deg,var(--bg) 0%,rgba(16,17,15,.95) 36%,rgba(16,17,15,.35) 100%);z-index:1;pointer-events:none}.heroimage{position:absolute;right:0;top:0;width:66%;height:100%;object-fit:cover;object-position:40% 28%;opacity:.76;mask-image:linear-gradient(90deg,transparent 0%,#000 28%,#000 82%,transparent 100%)}.hero-content{position:relative;z-index:2;max-width:660px}.eyebrow{color:var(--accent);text-transform:uppercase;font-size:11px;letter-spacing:.2em;font-weight:900;display:flex;align-items:center;gap:10px}.eyebrow:before{content:"";width:28px;height:1px;background:var(--accent)}h1{font-size:clamp(44px,7vw,84px);line-height:.98;letter-spacing:-.065em;margin:22px 0 24px;max-width:760px}h1 em{font-style:normal;color:var(--accent)}.lead{font-size:clamp(16px,2vw,19px);color:#d1d3ca;max-width:510px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.trustline{display:flex;gap:20px;flex-wrap:wrap;margin-top:38px;color:var(--muted);font-size:12px}.trustline span:before{content:"✓";color:var(--accent);margin-right:7px;font-weight:900}.section{padding:100px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:35px}.kicker{color:var(--accent);font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:900}.h2{font-size:clamp(32px,5vw,55px);letter-spacing:-.055em;line-height:1.04;margin:12px 0 0;max-width:700px}.section-desc{max-width:390px;color:var(--muted);font-size:14px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:linear-gradient(145deg,#1b1e19,#141613);border:1px solid var(--line);border-radius:20px;padding:27px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}.card:hover{transform:translateY(-6px);border-color:rgba(199,243,107,.5)}.num{color:var(--accent);font-size:12px;font-weight:900;letter-spacing:.12em}.card h3{font-size:23px;letter-spacing:-.035em;margin:30px 0 10px}.card p{color:var(--muted);font-size:14px;margin:0}.tag{display:inline-block;margin-top:20px;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-size:11px;color:#d7d9d1}.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}.about-photo{position:relative;border-radius:22px;overflow:hidden;min-height:520px;background:#222}.about-photo img{width:100%;height:540px;object-fit:cover;object-position:center 20%}.photo-label{position:absolute;left:18px;bottom:18px;background:rgba(15,16,14,.78);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:14px;padding:13px 16px;font-size:12px}.about-copy p{color:var(--muted)}.checks{list-style:none;padding:0;margin:26px 0;display:grid;gap:13px}.checks li{display:flex;gap:12px;align-items:flex-start}.checks li:before{content:"↗";display:grid;place-items:center;flex:0 0 24px;height:24px;border-radius:50%;background:rgba(199,243,107,.13);color:var(--accent);font-size:13px}.pricing{background:#151713}.pricegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;align-items:stretch}.pricecard{border:1px solid var(--line);border-radius:22px;padding:28px;background:#1a1c18;display:flex;flex-direction:column}.pricecard.featured{border-color:var(--accent);background:linear-gradient(155deg,rgba(199,243,107,.12),#191b17 48%);box-shadow:0 0 0 1px rgba(199,243,107,.08)}.popular{align-self:flex-start;background:var(--accent);color:#12140e;font-size:10px;text-transform:uppercase;font-weight:900;letter-spacing:.08em;border-radius:999px;padding:6px 10px;margin-bottom:12px}.pricecard h3{font-size:22px;margin:7px 0}.price{font-size:40px;font-weight:900;letter-spacing:-.06em;margin:16px 0 4px}.price small{font-size:13px;color:var(--muted);letter-spacing:0;font-weight:500}.price-sub{color:var(--muted);font-size:12px;min-height:38px}.pricecard ul{list-style:none;padding:0;margin:24px 0 28px;display:grid;gap:12px;color:#d4d6cd;font-size:13px;flex:1}.pricecard li:before{content:"✓";color:var(--accent);margin-right:9px}.pricecard .btn{width:100%}.note{font-size:11px;color:var(--muted);margin-top:20px}.gallery{display:grid;grid-template-columns:1.1fr .9fr .9fr;gap:14px}.gallery figure{margin:0;position:relative;border-radius:18px;overflow:hidden;background:var(--panel);min-height:260px}.gallery img{width:100%;height:100%;min-height:300px;object-fit:cover;transition:transform .7s}.gallery figure:hover img{transform:scale(1.04)}.gallery figcaption{position:absolute;bottom:0;left:0;right:0;padding:40px 18px 17px;background:linear-gradient(transparent,rgba(0,0,0,.8));font-size:13px;font-weight:700}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{border-top:1px solid var(--line);padding:22px 12px 0 0}.step strong{font-size:13px;color:var(--accent)}.step h3{font-size:18px;margin:15px 0 8px}.step p{font-size:13px;color:var(--muted)}.faq{max-width:820px;margin:auto}.faq details{border-bottom:1px solid var(--line);padding:20px 0}.faq summary{cursor:pointer;list-style:none;font-weight:750;display:flex;justify-content:space-between;gap:18px}.faq summary:after{content:"+";color:var(--accent);font-size:22px;line-height:1}.faq details[open] summary:after{content:"−"}.faq p{color:var(--muted);font-size:14px;max-width:700px}.final-cta{padding:75px 0}.cta-box{border-radius:26px;padding:clamp(28px,6vw,70px);background:radial-gradient(ellipse at 90% 20%,rgba(199,243,107,.17),transparent 35%),linear-gradient(130deg,#20251a,#171916);border:1px solid rgba(199,243,107,.23);display:flex;align-items:center;justify-content:space-between;gap:30px}.cta-box h2{font-size:clamp(30px,5vw,54px);line-height:1.03;letter-spacing:-.055em;margin:12px 0;max-width:680px}.cta-box p{color:var(--muted);max-width:580px}.footer{padding:30px 0 45px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}.socials{display:flex;gap:18px}.socials a:hover{color:var(--accent)}.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}.reveal.visible{opacity:1;transform:translateY(0)}.delay1{transition-delay:.1s}.delay2{transition-delay:.2s}.delay3{transition-delay:.3s}.float{animation:float 6s ease-in-out infinite}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.trap{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}.lead-form{display:grid;gap:8px}.lead-form label{font-size:12px;color:#d6d8d0;font-weight:700;margin-top:5px}.lead-form input,.lead-form select{width:100%;background:#11130f;border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:13px 14px;color:#f5f4ef;font:inherit;font-size:14px}.lead-form input:focus,.lead-form select:focus{outline:2px solid #c7f36b;outline-offset:1px}.lead-form select option{background:#171916}.form-note{font-size:11px!important;color:#b4b6ad!important;margin:4px 0 0!important}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}@media(max-width:850px){.navlinks{display:none}.hero{min-height:690px;padding:70px 0}.heroimage{width:100%;opacity:.42;object-position:58% center;mask-image:linear-gradient(90deg,rgba(0,0,0,.55),#000 50%,#000)}.hero:before{background:linear-gradient(90deg,rgba(16,17,15,.9),rgba(16,17,15,.5)),linear-gradient(0deg,var(--bg),transparent 60%)}.section{padding:75px 0}.section-head{display:block}.section-desc{margin-top:16px}.grid3,.pricegrid{grid-template-columns:1fr}.about{grid-template-columns:1fr;gap:30px}.about-photo{min-height:380px}.about-photo img{height:440px}.gallery{grid-template-columns:1fr 1fr}.gallery figure:first-child{grid-column:span 2}.steps{grid-template-columns:1fr 1fr}.cta-box{align-items:flex-start;flex-direction:column}}@media(max-width:520px){.wrap{width:min(var(--max),calc(100% - 28px))}.nav{height:66px}.brand{font-size:17px}.navcta{font-size:11px;padding:10px 12px}.hero{min-height:650px;padding:55px 0}.heroimage{width:120%;right:-20%;object-position:52% center}h1{font-size:47px}.lead{font-size:16px}.actions .btn{width:100%}.trustline{gap:10px 15px}.section{padding:64px 0}.card,.pricecard{padding:23px}.gallery{grid-template-columns:1fr}.gallery figure:first-child{grid-column:auto}.gallery img{min-height:340px}.steps{grid-template-columns:1fr}.step{padding-top:16px}.cta-box{padding:28px 22px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Vlad Fitness Pro">VLAD<span>.</span>FITNESS PRO</a>
+    <nav class="navlinks" aria-label="Главная навигация">
+      <a href="#services">Услуги</a><a href="#about">Обо мне</a><a href="#prices">Цены</a><a href="#faq">FAQ</a>
+    </nav>
+    <a class="navcta" href="#contact">Записаться <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+<main id="top">
+<section class="hero">
+  <img class="heroimage" src="assets/hero-gym.png" alt="Vlad Fitness Pro — рекламный образ тренера" fetchpriority="high">
+  <div class="wrap hero-content">
+    <div class="eyebrow">Персональный тренинг · Беларусь / онлайн</div>
+    <h1>Сильнее.<br><em>Увереннее.</em><br>С системой.</h1>
+    <p class="lead">Тренировки и сопровождение, которые помогают выстроить привычку, улучшить технику и двигаться к своей форме без хаоса и случайных решений.</p>
+    <div class="actions">
+      <a class="btn" href="#prices">Выбрать формат <span>↗</span></a>
+      <a class="btn secondary" href="#about">Познакомиться со мной</a>
+    </div>
+    <div class="trustline"><span>Фитнес-образование</span><span>1,5 года опыта тренером</span><span>План под твою цель</span></div>
+  </div>
+</section>
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><div class="kicker">Как я могу помочь</div><h2 class="h2">Твой план. Твоя цель.<br>Понятный следующий шаг.</h2></div>
+      <p class="section-desc">Не обещаю магию за неделю. Помогаю организовать тренировочный процесс, разобраться с техникой и сохранять последовательность.</p>
+    </div>
+    <div class="grid3">
+      <article class="card reveal"><div class="num">01 / PERSONAL</div><h3>Персональные тренировки</h3><p>Работа в зале с вниманием к технике, нагрузке и твоему уровню. Планируем прогресс и корректируем упражнения по ходу.</p><span class="tag">Зал · индивидуально</span></article>
+      <article class="card reveal delay1"><div class="num">02 / ONLINE</div><h3>Онлайн-сопровождение</h3><p>План тренировок, обратная связь и регулярная корректировка под твой график, доступное оборудование и самочувствие.</p><span class="tag">Из любого города</span></article>
+      <article class="card reveal delay2"><div class="num">03 / START</div><h3>Стартовая консультация</h3><p>Обсудим цель, тренировочный опыт и ограничения. На выходе — понятный маршрут и рекомендации по первым шагам.</p><span class="tag">Начать без перегруза</span></article>
+    </div>
+  </div>
+</section>
+<section class="section" id="about">
+  <div class="wrap about">
+    <div class="about-photo reveal"><img src="assets/portrait-tank.png" alt="Vlad Fitness Pro в спортивной форме" loading="lazy"><div class="photo-label">VLAD FITNESS PRO <span style="color:var(--accent)">/ ТРЕНИРУЙСЯ С СИСТЕМОЙ</span></div></div>
+    <div class="about-copy reveal delay1">
+      <div class="kicker">О тренере</div><h2 class="h2">Не просто тренировка.<br>Понимание процесса.</h2>
+      <p>Меня зовут Влад. Я учился в БГУФК и имею 1,5 года опыта работы тренером в фитнес-клубе «Мир Фитнеса». Сейчас я развиваю собственный проект Vlad Fitness Pro.</p>
+      <p>В работе делаю акцент на понятной структуре, постепенном прогрессе и упражнениях, которые подходят именно тебе. Без универсальных обещаний и экстремальных подходов.</p>
+      <ul class="checks"><li>Подбор нагрузки с учётом опыта и цели</li><li>Внимание к технике и качеству выполнения</li><li>План, который можно встроить в обычную жизнь</li><li>Регулярная обратная связь в выбранном формате</li></ul>
+      <a class="btn secondary" href="#contact">Обсудить свою цель ↗</a>
+    </div>
+  </div>
+</section>
+<section class="section pricing" id="prices">
+  <div class="wrap">
+    <div class="section-head reveal"><div><div class="kicker">Прозрачные условия</div><h2 class="h2">Выбери свой формат</h2></div><p class="section-desc">Стартовые цены для запуска личного бренда. Перед публикацией уточни доступность зала, длительность занятия и точный объём онлайн-сопровождения.</p></div>
+    <div class="pricegrid">
+      <article class="pricecard reveal"><div class="num">01 / FIRST STEP</div><h3>Стартовая консультация</h3><div class="price">30 BYN</div><div class="price-sub">Одна встреча · ориентировочно 30–45 минут</div><ul><li>Разбор цели и текущего опыта</li><li>Обсуждение режима и графика</li><li>Рекомендации по первым шагам</li><li>Выбор подходящего формата работы</li></ul><a class="btn secondary" href="#contact" data-service="Консультация">Выбрать консультацию</a></article>
+      <article class="pricecard featured reveal delay1"><span class="popular">Оптимальный старт</span><div class="num">02 / PERSONAL</div><h3>Персональная тренировка</h3><div class="price">45 BYN <small>/ занятие</small></div><div class="price-sub">Индивидуальная работа в зале</div><ul><li>Тренировка под твой уровень</li><li>Контроль техники упражнений</li><li>Подбор нагрузки и вариантов</li><li>Рекомендации по дальнейшему плану</li></ul><a class="btn" href="#contact" data-service="Персональная тренировка">Записаться в зал ↗</a></article>
+      <article class="pricecard reveal delay2"><div class="num">03 / ONLINE</div><h3>Онлайн-сопровождение</h3><div class="price">180 BYN <small>/ 4 недели</small></div><div class="price-sub">Для тех, кому важны структура и обратная связь</div><ul><li>Индивидуальный тренировочный план</li><li>Согласованные контрольные точки</li><li>Обратная связь по договорённому графику</li><li>Корректировки по прогрессу и доступному инвентарю</li></ul><a class="btn secondary" href="#contact" data-service="Онлайн-сопровождение">Обсудить формат</a></article>
+    </div>
+    <p class="note">Цены указаны в белорусских рублях (BYN) и являются предложением для старта, а не подтверждённым прайсом действующего клуба. Абонемент в зал, если требуется, оплачивается отдельно. Сроки и состав сопровождения согласуются до оплаты.</p>
+  </div>
+</section>
+<section class="section" id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal"><div><div class="kicker">Vlad Fitness Pro</div><h2 class="h2">Дисциплина — в деталях.</h2></div><p class="section-desc">Визуальная основа бренда. Рекламные образы стоит сочетать с реальными фото, видео техники и живыми фрагментами тренировок.</p></div>
+    <div class="gallery">
+      <figure class="reveal"><img src="assets/portrait-shirtless.png" alt="Рекламный портрет тренера в тренажёрном зале" loading="lazy"><figcaption>Сила — это последовательность.</figcaption></figure>
+      <figure class="reveal delay1"><img src="assets/mirror-progress.png" alt="Тренировочный образ для фитнес-профиля" loading="lazy"><figcaption>Работа над формой</figcaption></figure>
+      <figure class="reveal delay2"><img src="assets/portrait-alt.png" alt="Спортивный портрет Vlad Fitness Pro" loading="lazy"><figcaption>Тренируйся осознанно</figcaption></figure>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal"><div><div class="kicker">Как всё устроено</div><h2 class="h2">От первого сообщения<br>до понятного плана.</h2></div></div>
+    <div class="steps">
+      <div class="step reveal"><strong>ШАГ 01</strong><h3>Заявка</h3><p>Ты рассказываешь о цели, опыте и удобном формате.</p></div>
+      <div class="step reveal delay1"><strong>ШАГ 02</strong><h3>Знакомство</h3><p>Уточняем ожидания, график и важные ограничения.</p></div>
+      <div class="step reveal delay2"><strong>ШАГ 03</strong><h3>План</h3><p>Выбираем формат работы и согласуем следующие шаги.</p></div>
+      <div class="step reveal delay3"><strong>ШАГ 04</strong><h3>Прогресс</h3><p>Отслеживаем выполнение и корректируем план по необходимости.</p></div>
+    </div>
+  </div>
+</section>
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="section-head reveal" style="justify-content:center;text-align:center"><div><div class="kicker">FAQ</div><h2 class="h2">Частые вопросы</h2></div></div>
+    <div class="faq reveal">
+      <details><summary>Я новичок. Мне подойдут тренировки?</summary><p>Да, стартовый план должен соответствовать текущему уровню. На первой встрече обсудим опыт, цель и подходящую нагрузку.</p></details>
+      <details><summary>Можно заниматься онлайн?</summary><p>Да. Формат, состав плана и частоту обратной связи согласуем заранее. Для техники отдельных упражнений могут понадобиться видео выполнения.</p></details>
+      <details><summary>Нужно ли сразу покупать абонемент?</summary><p>Нет, сначала можно обсудить цель и формат. Если выберем тренировки в конкретном зале, условия доступа и стоимость абонемента нужно уточнить отдельно.</p></details>
+      <details><summary>Ты обещаешь конкретный результат за срок?</summary><p>Нет универсальных гарантий: результат зависит от регулярности, исходных данных, восстановления и других факторов. Я предлагаю структурированный процесс и обратную связь.</p></details>
+      <details><summary>Как записаться?</summary><p>Напиши в Instagram или Telegram, укажи свою цель и удобный формат. Ссылки ниже нужно проверить и при необходимости заменить перед публикацией сайта.</p></details>
+    </div>
+  </div>
+</section>
+<section class="final-cta" id="contact">
+  <div class="wrap"><div class="cta-box reveal">
+    <div><div class="kicker">Первый шаг начинается здесь</div><h2>Готов тренироваться с планом?</h2><p>Напиши мне, чего хочешь достичь. Обсудим текущую точку, доступное время и формат, с которого разумно начать.</p></div>
+    <form id="lead-form" class="lead-form" style="margin-top:0;min-width:min(100%,330px);max-width:380px;width:100%">
+      <label for="lead-name">Как к тебе обращаться?</label>
+      <input id="lead-name" name="name" autocomplete="name" placeholder="Твоё имя" required>
+      <label for="lead-contact">Твой Telegram или телефон</label>
+      <input id="lead-contact" name="contact" autocomplete="off" placeholder="@username или +375…" required>
+      <label for="lead-goal">Твоя главная цель</label>
+      <select id="lead-goal" name="goal" required>
+        <option value="">Выбери цель</option>
+        <option>Набрать мышечную массу</option>
+        <option>Снизить процент жира</option>
+        <option>Стать сильнее</option>
+        <option>Начать тренироваться</option>
+        <option>Улучшить технику</option>
+        <option>Другая цель</option>
+      </select>
+      <label for="lead-format">Формат</label>
+      <select id="lead-format" name="format" required>
+        <option value="">Выбери формат</option>
+        <option>Персональная тренировка в зале</option>
+        <option>Онлайн-сопровождение</option>
+        <option>Сначала консультация</option>
+      </select>
+      <label class="trap" aria-hidden="true" for="lead-website">Не заполнять</label>
+      <input class="trap" id="lead-website" name="website" tabindex="-1" autocomplete="off">
+      <button class="btn" type="submit" style="width:100%;margin-top:8px">Отправить заявку ↗</button>
+      <p id="lead-status" class="form-note" aria-live="polite">Заявка придёт Владу в Telegram. Отправка заявки ещё не означает подтверждённую запись.</p>
+    </form>
+  </div></div>
+</section>
+</main>
+<footer class="footer"><div class="wrap footer-inner"><div><a class="brand" href="#top">VLAD<span>.</span>FITNESS PRO</a><p>© <span id="year"></span> · Персональный тренинг и онлайн-сопровождение</p></div><div class="socials"><a href="https://www.instagram.com/vlad_fitnesspro/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://ig.me/m/vlad_fitnesspro" target="_blank" rel="noopener">Direct ↗</a><a href="#top">Наверх ↑</a></div></div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('[data-service]').forEach(el=>el.addEventListener('click',()=>{const service=el.dataset.service;try{sessionStorage.setItem('vfp_service',service)}catch(e){}}));
+const leadForm=document.getElementById('lead-form');
+if(leadForm){leadForm.addEventListener('submit',async(e)=>{e.preventDefault();const data=new FormData(leadForm);const status=document.getElementById('lead-status');const button=leadForm.querySelector('button[type=submit]');const payload={name:String(data.get('name')||'').trim(),contact:String(data.get('contact')||'').trim(),goal:String(data.get('goal')||''),format:String(data.get('format')||''),website:String(data.get('website')||'')};button.disabled=true;button.textContent='Отправляем…';status.textContent='Отправляем заявку…';try{const response=await fetch('/.netlify/functions/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const result=await response.json().catch(()=>({}));if(!response.ok)throw new Error(result.error||'Не удалось отправить заявку.');status.textContent='Заявка отправлена! Влад получит её в Telegram и свяжется с тобой. Это пока запрос на связь, время тренировки будет подтверждено отдельно.';leadForm.reset();}catch(err){status.textContent='Автоматическая отправка пока не подключена или временно недоступна. Напиши напрямую в Instagram Direct — так заявка точно попадёт в переписку.';window.open('https://ig.me/m/vlad_fitnesspro','_blank','noopener');}finally{button.disabled=false;button.textContent='Отправить заявку ↗';}});}
+</script>
+</body>
+</html>
